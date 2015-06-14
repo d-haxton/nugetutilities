@@ -4,3 +4,4 @@ NugetUtilities.UpdateVersion/obj/
 NugetUtilities.UpdateReleaseNotes/bin/
 NugetUtilities.Shared/obj/
 NugetUtilities.Shared/bin/
+*.suo
