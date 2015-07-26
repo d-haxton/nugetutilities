@@ -5,3 +5,4 @@ NugetUtilities.UpdateReleaseNotes/bin/
 NugetUtilities.Shared/obj/
 NugetUtilities.Shared/bin/
 *.suo
+*.nupkg
