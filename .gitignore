@@ -6,3 +6,7 @@ NugetUtilities.Shared/obj/
 NugetUtilities.Shared/bin/
 *.suo
 *.nupkg
+packages/
+NugetUtilities.UpdateAssemblyInfo/bin/
+NugetUtilities.UpdateAssemblyInfo/obj/
+*.user
