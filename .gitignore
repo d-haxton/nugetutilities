@@ -10,3 +10,5 @@ packages/
 NugetUtilities.UpdateAssemblyInfo/bin/
 NugetUtilities.UpdateAssemblyInfo/obj/
 *.user
+_ReSharper.Caches/
+.vs/

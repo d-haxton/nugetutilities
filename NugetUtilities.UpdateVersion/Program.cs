@@ -75,7 +75,7 @@ Will increment the version element from 1.2.3 to 1.3.3
 
             Console.WriteLine("Incrementing version in: " + NuspecFile.File.FullName);
 
-            var version = NuspecFile.Metadata.Element("version");
+            var version = NuspecFile.Metadata.Elements().Single(x => x.Name.LocalName == "version");
             Console.WriteLine("Changed version to: " + newVersion);
             version.Value = newVersion;
         }

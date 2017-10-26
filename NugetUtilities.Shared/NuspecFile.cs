@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace NugetUtilities.Shared
@@ -15,7 +16,7 @@ namespace NugetUtilities.Shared
             this.file = file;
             document = XDocument.Parse(System.IO.File.ReadAllText(file.FullName), LoadOptions.PreserveWhitespace);
             package = document.Root;
-            metadata = package.Element("metadata");
+            metadata = package.Elements().Single(x => x.Name.LocalName == "metadata");
         }
 
         public FileInfo File
@@ -45,7 +46,7 @@ namespace NugetUtilities.Shared
 
         public void Save()
         {
-            System.IO.File.WriteAllText(file.FullName, document.ToString(SaveOptions.DisableFormatting));            
+            System.IO.File.WriteAllText(file.FullName, document.ToString(SaveOptions.DisableFormatting));
         }
     }
 }

@@ -23,7 +23,7 @@ UpdateVersion Nuget\$nuspec.file releaseNotes
         protected override void Execute(string[] args)
         {
             var releaseNotes = args[0];
-            var node = NuspecFile.Metadata.Element("releaseNotes");
+            var node = NuspecFile.Metadata.Elements().Single(x => x.Name.LocalName == "releaseNotes");
             node.Value = releaseNotes;
         }
     }
